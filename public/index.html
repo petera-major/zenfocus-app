@@ -1,0 +1,91 @@
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https://open.spotify.com; script-src 'self'; style-src 'self' 'unsafe-inline'; frame-src https://open.spotify.com;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QuietZenFocus</title>
+  <link rel="stylesheet" href="style.css" />
+  <link id="theme" rel="stylesheet" href="../themes/warm.css" />
+</head>
+<body>
+  <video autoplay muted loop id="bgVideo">
+    <source src="../assets/videos/lofi1.mp4" type="video/mp4" />
+  </video>
+
+  <div class="overlay">
+    <div class="window-controls">
+        <button id="exitBtn" class="window-btn exit">×</button>
+      </div>      
+    <h1>QuietZenFocus</h1>
+
+    <div class="timer">
+      <input type="number" id="focusTime" value="25" /> min
+      <input type="number" id="breakTime" value="5" /> break
+      <div id="timeDisplay">25:00</div>
+      <button id="startTimer">Start</button>
+      <button id="resetTimer">Reset</button>
+    </div>
+
+    <div class="controls">
+      <select id="videoSelector">
+        <option value="lofi1"> Rainy Window</option>
+        <option value="lofi5"> Coffee Shop</option>
+        <option value="lofi2"> Moving Train</option>
+        <option value="lofi4"> Aesthetic Street</option>
+        <option value="lofi3"> Hazy Town</option>
+      </select>
+
+      <select id="musicSelector">
+        <option value="lofi1"> Chillhop</option>
+        <option value="lofi2"> RNB Playlist</option>
+        <option value="lofi3"> Aesthetic Playlist</option>
+        <option value="campfire"> Campfire Sounds</option>
+        <option value="keyboard"> Typing Sounds</option>
+        <option value="rain"> Rain Sounds</option>
+      </select>
+
+      <div id="themeOverlay"></div>
+
+      <select id="themeSelector">
+        <option value="warm"> Warm</option>
+        <option value="cool"> Cool</option>
+        <option value="violet"> Violet</option>
+      </select>
+    </div>
+
+    <div id="quote">"Breathe in, focus out."</div>
+
+    <button id="openNotes">📝 Notes</button>
+  </div>
+
+  <div id="notesPanel" class="hidden">
+    <textarea id="notes" placeholder="Write your tasks or thoughts here..."></textarea>
+    <button id="closeNotes">Close</button>
+  </div>
+
+  <div id="todoCard" class="todo-card">
+    <h3>📝 To-Do List</h3>
+    <ul id="todoList"></ul>
+    <div class="todo-inputs">
+      <input type="text" id="todoInput" placeholder="New task..." />
+      <button id="addTodo">➕</button>
+    </div>
+    <button id="clearTodos" class="clear-btn">Clear All</button>
+  </div>
+  
+  <audio id="audioPlayer" loop></audio>
+
+  <script src="script.js"></script>
+
+  <div id="exitModal" class="modal hidden">
+    <div class="modal-content">
+      <p>Are you sure you want to exit ?</p>
+      <div class="modal-buttons">
+        <button id="confirmExit">Yes</button>
+        <button id="cancelExit">Cancel</button>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

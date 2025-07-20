@@ -1,0 +1,34 @@
+{
+  "name": "quietzenfocus",
+  "version": "1.0.0",
+  "main": "main.js",
+  "build": {
+    "appId": "com.quietzen.focus",
+    "productName": "QuietZenFocus",
+    "files": [
+      "**/*"
+    ],
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@electron/remote": "^2.1.3"
+  },
+  "devDependencies": {
+    "electron": "^37.2.3",
+    "electron-builder": "^26.0.12"
+  }
+}

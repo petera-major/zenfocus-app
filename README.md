@@ -1,7 +1,7 @@
 QuietZenFocus is a minimal, aesthetic productivity overlay app built with Electron.
 Designed to help you breathe, focus, and vibe while working or studying with features that support your mental flow
 
-More about QuietZenFocus: [Click Here](https://quietzenfocus.netlify.app)
+Live Web App to download QuietZenFocus: [Click Here](https://quietzenfocus.netlify.app)
 
 Features:
 - Ambient video backdrops: Rainy windows, cozy cafe & more
